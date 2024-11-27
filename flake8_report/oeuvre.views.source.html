@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>oeuvre\views.py - flake8 annotated source</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <h1>
+            <a href="oeuvre.views.report.html">
+               <img src="back.svg" alt="&#x2B05;">
+               oeuvre\views.py source
+            </a>
+         </h1>
+
+         <div id="doc">
+            <div id="l1"
+               class="code sev- "><tt><i>1</i> <span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span></tt>
+            </div>
+            <div id="l2"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E275
+                     </span>
+                     Missing whitespace after keyword</li>
+               
+               </ul><tt><i>2</i> <span class="n">from</span><span class="o">.</span><span class="kn">import</span> <span class="nn">models</span></tt>
+            </div>
+            <div id="l3"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E402
+                     </span>
+                     Module level import not at top of file</li>
+               
+               </ul><tt><i>3</i> <span class="kn">from</span> <span class="nn">elenizado</span> <span class="kn">import</span> <span class="n">models</span> <span class="k">as</span> <span class="n">elenizado_models</span></tt>
+            </div>
+            <div id="l4"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E402
+                     </span>
+                     Module level import not at top of file</li>
+               
+               </ul><tt><i>4</i> <span class="kn">from</span> <span class="nn">about</span> <span class="kn">import</span> <span class="n">models</span> <span class="k">as</span> <span class="n">about_models</span></tt>
+            </div>
+            <div id="l5"
+               class="code sev- "><tt><i>5</i> &nbsp;</tt>
+            </div>
+            <div id="l6"
+               class="code sev- "><tt><i>6</i> <span class="c1"># Create your views here.</span></tt>
+            </div>
+            <div id="l7"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>7</i> <span class="k">def</span> <span class="nf">poeme</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+            </div>
+            <div id="l8"
+               class="code sev- "><tt><i>8</i>     <span class="n">events_r</span> <span class="o">=</span> <span class="n">elenizado_models</span><span class="o">.</span><span class="n">Evenement</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s1">&#39;-date_add&#39;</span><span class="p">)[:</span><span class="mi">3</span><span class="p">]</span></tt>
+            </div>
+            <div id="l9"
+               class="code sev- "><tt><i>9</i>     <span class="n">gallerie</span> <span class="o">=</span> <span class="n">about_models</span><span class="o">.</span><span class="n">Gallerie</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></tt>
+            </div>
+            <div id="l10"
+               class="code sev- "><tt><i>10</i>     <span class="n">poeme</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Poesie</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></tt>
+            </div>
+            <div id="l11"
+               class="code sev- "><tt><i>11</i>     <span class="n">datas</span> <span class="o">=</span> <span class="p">{</span></tt>
+            </div>
+            <div id="l12"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E231
+                     </span>
+                     Missing whitespace after ':'</li>
+               
+               </ul><tt><i>12</i>             <span class="s2">&quot;events_r&quot;</span><span class="p">:</span><span class="n">events_r</span><span class="p">,</span></tt>
+            </div>
+            <div id="l13"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E231
+                     </span>
+                     Missing whitespace after ':'</li>
+               
+               </ul><tt><i>13</i>             <span class="s2">&quot;gallerie&quot;</span><span class="p">:</span><span class="n">gallerie</span><span class="p">,</span></tt>
+            </div>
+            <div id="l14"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E231
+                     </span>
+                     Missing whitespace after ':'</li>
+               
+               </ul><tt><i>14</i>             <span class="s2">&quot;poeme&quot;</span><span class="p">:</span><span class="n">poeme</span><span class="p">,</span></tt>
+            </div>
+            <div id="l15"
+               class="code sev- "><tt><i>15</i>     <span class="p">}</span></tt>
+            </div>
+            <div id="l16"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E231
+                     </span>
+                     Missing whitespace after ',' (in 2 places)</li>
+               
+                  <li>
+                     <span class="count sev-2">
+                        W292
+                     </span>
+                     No newline at end of file</li>
+               
+               </ul><tt><i>16</i>     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s2">&quot;pages/poesie.html&quot;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+            </div>
+            
+         </div>
+      </div>
+   </body>
+</html>

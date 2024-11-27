@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: website\views.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="website.views.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               website\views.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F401:</strong> 'json' imported but unused
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="website.views.source.html#l6">
+                  <tt><i>6</i> <span class="kn">import</span> <span class="nn">json</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F841">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F841:</strong> local variable 'isemail' is assigned to but never used
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="website.views.source.html#l39">
+                  <tt><i>39</i>         <span class="n">isemail</span> <span class="o">=</span> <span class="kc">True</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  10
+               </span>
+               <strong>E231:</strong> missing whitespace after ':'
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="website.views.source.html#l26">
+                  <tt><i>26</i>              <span class="s1">&#39;publication_r&#39;</span><span class="p">:</span><span class="n">publication_r</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="website.views.source.html#l27">
+                  <tt><i>27</i>              <span class="s1">&#39;events_r&#39;</span><span class="p">:</span><span class="n">events_r</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="website.views.source.html#l28">
+                  <tt><i>28</i>              <span class="s1">&#39;gallerie&#39;</span><span class="p">:</span><span class="n">gallerie</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="website.views.source.html#l29">
+                  <tt><i>29</i>              <span class="s1">&#39;site_info&#39;</span><span class="p">:</span><span class="n">site_info</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="website.views.source.html#l30">
+                  <tt><i>30</i>              <span class="s1">&#39;pub&#39;</span><span class="p">:</span><span class="n">pub</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="website.views.source.html#l32">
+                  <tt><i>32</i>     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;pages/index.html&#39;</span><span class="p">,</span><span class="n">datas</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="website.views.source.html#l53">
+                  <tt><i>53</i>     <span class="s2">&quot;success&quot;</span><span class="p">:</span><span class="n">success</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':':</p>
+               
+               <a href="website.views.source.html#l54">
+                  <tt><i>54</i>     <span class="s2">&quot;message&quot;</span><span class="p">:</span><span class="n">message</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="website.views.source.html#l57">
+                  <tt><i>57</i>     <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">safe</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E402">
+               <span class="count sev-2">
+                  5
+               </span>
+               <strong>E402:</strong> module level import not at top of file
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="website.views.source.html#l4">
+                  <tt><i>4</i> <span class="kn">from</span> <span class="nn">elenizado</span> <span class="kn">import</span> <span class="n">models</span> <span class="k">as</span> <span class="n">elenizado_models</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="website.views.source.html#l5">
+                  <tt><i>5</i> <span class="kn">from</span> <span class="nn">about</span> <span class="kn">import</span> <span class="n">models</span> <span class="k">as</span> <span class="n">about_models</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="website.views.source.html#l6">
+                  <tt><i>6</i> <span class="kn">import</span> <span class="nn">json</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="website.views.source.html#l7">
+                  <tt><i>7</i> <span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">JsonResponse</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="website.views.source.html#l8">
+                  <tt><i>8</i> <span class="kn">from</span> <span class="nn">django.core.validators</span> <span class="kn">import</span> <span class="n">validate_email</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W291">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>W291:</strong> trailing whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="website.views.source.html#l3">
+                  <tt><i>3</i> <span class="n">from</span><span class="o">.</span><span class="kn">import</span> <span class="nn">models</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="website.views.source.html#l7">
+                  <tt><i>7</i> <span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">JsonResponse</span> </tt>
+               </a>
+            </li><li>
+               
+               <a href="website.views.source.html#l35">
+                  <tt><i>35</i>     <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E122">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E122:</strong> continuation line missing indentation or outdented
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="website.views.source.html#l53">
+                  <tt><i>53</i>     <span class="s2">&quot;success&quot;</span><span class="p">:</span><span class="n">success</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="website.views.source.html#l54">
+                  <tt><i>54</i>     <span class="s2">&quot;message&quot;</span><span class="p">:</span><span class="n">message</span><span class="p">,</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E251">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E251:</strong> unexpected spaces around keyword / parameter equals
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="website.views.source.html#l43">
+                  <tt><i>43</i>             <span class="n">email</span> <span class="o">=</span> <span class="n">email</span><span class="p">,</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 1
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="website.views.source.html#l11">
+                  <tt><i>11</i> <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="website.views.source.html#l34">
+                  <tt><i>34</i> <span class="k">def</span> <span class="nf">is_newsletter</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E203:</strong> whitespace before ':'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="website.views.source.html#l49">
+                  <tt><i>49</i>     <span class="k">except</span> <span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E222">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E222:</strong> multiple spaces after operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="website.views.source.html#l52">
+                  <tt><i>52</i>     <span class="n">data</span> <span class="o">=</span>   <span class="p">{</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E275">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E275:</strong> missing whitespace after keyword
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="website.views.source.html#l3">
+                  <tt><i>3</i> <span class="n">from</span><span class="o">.</span><span class="kn">import</span> <span class="nn">models</span> </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E722">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E722:</strong> do not use bare 'except'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="website.views.source.html#l49">
+                  <tt><i>49</i>     <span class="k">except</span> <span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

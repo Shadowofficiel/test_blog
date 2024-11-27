@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>elenizado\tests\test_contact_form.py - flake8 annotated source</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <h1>
+            <a href="elenizado.tests.test_contact_form.report.html">
+               <img src="back.svg" alt="&#x2B05;">
+               elenizado\tests\test_contact_form.py source
+            </a>
+         </h1>
+
+         <div id="doc">
+            <div id="l1"
+               class="code sev- "><tt><i>1</i> <span class="kn">import</span> <span class="nn">pytest</span></tt>
+            </div>
+            <div id="l2"
+               class="code sev- "><tt><i>2</i> <span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span></tt>
+            </div>
+            <div id="l3"
+               class="code sev- "><tt><i>3</i> <span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span></tt>
+            </div>
+            <div id="l4"
+               class="code sev- "><tt><i>4</i> <span class="kn">from</span> <span class="nn">selenium.webdriver.support.ui</span> <span class="kn">import</span> <span class="n">WebDriverWait</span></tt>
+            </div>
+            <div id="l5"
+               class="code sev- "><tt><i>5</i> <span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="kn">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span></tt>
+            </div>
+            <div id="l6"
+               class="code sev- "><tt><i>6</i> <span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">reverse</span></tt>
+            </div>
+            <div id="l7"
+               class="code sev- "><tt><i>7</i> <span class="kn">from</span> <span class="nn">website.models</span> <span class="kn">import</span> <span class="n">SiteInfo</span></tt>
+            </div>
+            <div id="l8"
+               class="code sev- "><tt><i>8</i> &nbsp;</tt>
+            </div>
+            <div id="l9"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>9</i> <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">django_db</span></tt>
+            </div>
+            <div id="l10"
+               class="code sev- "><tt><i>10</i> <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">selenium</span></tt>
+            </div>
+            <div id="l11"
+               class="code sev- "><tt><i>11</i> <span class="k">def</span> <span class="nf">test_contact_form</span><span class="p">(</span><span class="n">live_server</span><span class="p">):</span></tt>
+            </div>
+            <div id="l12"
+               class="code sev- "><tt><i>12</i>     <span class="n">SiteInfo</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span></tt>
+            </div>
+            <div id="l13"
+               class="code sev- "><tt><i>13</i>         <span class="n">nom</span><span class="o">=</span><span class="s2">&quot;Test Site&quot;</span><span class="p">,</span></tt>
+            </div>
+            <div id="l14"
+               class="code sev- "><tt><i>14</i>         <span class="n">status</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span></tt>
+            </div>
+            <div id="l15"
+               class="code sev- "><tt><i>15</i>         <span class="n">telephone</span><span class="o">=</span><span class="s2">&quot;123456789&quot;</span></tt>
+            </div>
+            <div id="l16"
+               class="code sev- "><tt><i>16</i>     <span class="p">)</span></tt>
+            </div>
+            <div id="l17"
+               class="code sev- "><tt><i>17</i>     <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span></tt>
+            </div>
+            <div id="l18"
+               class="code sev- "><tt><i>18</i>     <span class="n">wait</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span></tt>
+            </div>
+            <div id="l19"
+               class="code sev- "><tt><i>19</i>     <span class="k">try</span><span class="p">:</span></tt>
+            </div>
+            <div id="l20"
+               class="code sev- "><tt><i>20</i>         <span class="n">url</span> <span class="o">=</span> <span class="n">live_server</span><span class="o">.</span><span class="n">url</span> <span class="o">+</span> <span class="n">reverse</span><span class="p">(</span><span class="s2">&quot;contact&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l21"
+               class="code sev- "><tt><i>21</i>         <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span></tt>
+            </div>
+            <div id="l22"
+               class="code sev- "><tt><i>22</i>         <span class="k">assert</span> <span class="s2">&quot;Contact&quot;</span> <span class="ow">in</span> <span class="n">driver</span><span class="o">.</span><span class="n">title</span></tt>
+            </div>
+            <div id="l23"
+               class="code sev- "><tt><i>23</i>         <span class="n">name_field</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="s2">&quot;id_nom&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l24"
+               class="code sev- "><tt><i>24</i>         <span class="n">email_field</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="s2">&quot;id_email&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l25"
+               class="code sev- "><tt><i>25</i>         <span class="n">message_field</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="s2">&quot;id_message&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l26"
+               class="code sev- "><tt><i>26</i>         <span class="n">submit_button</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element</span><span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="s2">&quot;submit&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l27"
+               class="code sev- "><tt><i>27</i>         <span class="n">name_field</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="s2">&quot;Test User&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l28"
+               class="code sev- "><tt><i>28</i>         <span class="n">email_field</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="s2">&quot;test@example.com&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l29"
+               class="code sev- "><tt><i>29</i>         <span class="n">message_field</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="s2">&quot;This is a test message.&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l30"
+               class="code sev- "><tt><i>30</i>         <span class="n">submit_button</span><span class="o">.</span><span class="n">click</span><span class="p">()</span></tt>
+            </div>
+            <div id="l31"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E501
+                     </span>
+                     Line too long (104 > 88 characters)</li>
+               
+               </ul><tt><i>31</i>         <span class="n">success_message</span> <span class="o">=</span> <span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span><span class="n">EC</span><span class="o">.</span><span class="n">presence_of_element_located</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">CLASS_NAME</span><span class="p">,</span> <span class="s2">&quot;success-message&quot;</span><span class="p">)))</span></tt>
+            </div>
+            <div id="l32"
+               class="code sev- "><tt><i>32</i>         <span class="k">assert</span> <span class="s2">&quot;Message envoyé avec succès&quot;</span> <span class="ow">in</span> <span class="n">success_message</span><span class="o">.</span><span class="n">text</span></tt>
+            </div>
+            <div id="l33"
+               class="code sev- "><tt><i>33</i>     <span class="k">finally</span><span class="p">:</span></tt>
+            </div>
+            <div id="l34"
+               class="code sev- "><tt><i>34</i>         <span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span></tt>
+            </div>
+            
+         </div>
+      </div>
+   </body>
+</html>
